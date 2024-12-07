@@ -1,97 +1,160 @@
-/* styles.css */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Body Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #E6E6FA;  /* Lavender color */
-    color: #4B0082;  /* Indigo text color */
-    line-height: 1.6;
+    background-color: #f0e6f7; /* Lavender color for the background */
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
 
+/* Header Styles */
 header {
-    background-color: #8A2BE2;
+    background-color: #6a4c9c; /* A deep lavender */
     color: white;
     padding: 20px;
     text-align: center;
 }
 
 header h1 {
+    margin: 0;
     font-size: 2.5rem;
 }
 
-.quote {
+header .quote {
     font-style: italic;
     margin-top: 10px;
 }
 
-section.introduction {
+header .home-button {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    background-color: #4c3484;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+header .home-button:hover {
+    background-color: #3e2a61;
+}
+
+/* Footer Styles */
+footer {
     text-align: center;
-    margin: 20px;
+    padding: 15px;
+    background-color: #6a4c9c;
+    color: white;
+}
+
+/* Meaning Section Styles */
+.meaning {
     padding: 20px;
-    background-color: #D8BFD8;
-    border-radius: 8px;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-nav.categories ul {
-    display: flex;
-    justify-content: center;
+.meaning h2 {
+    font-size: 2rem;
+    color: #4c3484;
+}
+
+.meaning p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Submenu Page Styles */
+.submenu {
+    padding: 20px;
+    background-color: #e3d4f1;
+    border-radius: 5px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submenu h2 {
+    font-size: 1.8rem;
+    color: #6a4c9c;
+}
+
+.submenu ul {
     list-style: none;
-    margin: 20px 0;
+    padding: 0;
 }
 
-nav.categories li {
-    margin: 0 15px;
+.submenu ul li {
+    margin-bottom: 10px;
+}
+
+.submenu ul li a {
+    text-decoration: none;
+    color: #4c3484;
+    font-size: 1.2rem;
+}
+
+.submenu ul li a:hover {
+    color: #6a4c9c;
+}
+
+/* Active Class for Toggleable Sections */
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Styles for Navigation Menu */
+nav.categories {
+    text-align: center;
+    margin: 30px 0;
 }
 
 nav.categories a {
     text-decoration: none;
-    color: #4B0082;
-    font-weight: bold;
-}
-
-section.category {
-    margin: 20px;
-}
-
-section.category h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-section.category ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-section.category li {
-    margin: 5px 0;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #8A2BE2;
-    color: white;
-}
-
-footer p {
-    font-size: 1rem;
-}
-.home-button {
-    display: inline-block;
+    color: #4c3484;
+    font-size: 1.2rem;
+    margin: 0 15px;
     padding: 10px 20px;
-    background-color: #4B0082;
-    color: white;
-    text-decoration: none;
+    background-color: #e3d4f1;
     border-radius: 5px;
-    font-size: 1em;
-    margin-top: 10px;
 }
 
-.home-button:hover {
-    background-color: #6A0DAD;
+nav.categories a:hover {
+    background-color: #4c3484;
+    color: white;
+}
+
+/* General Layout Adjustment */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Mobile Friendly */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .meaning, .submenu {
+        margin-top: 10px;
+        padding: 15px;
+    }
+
+    .home-button {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
 }
