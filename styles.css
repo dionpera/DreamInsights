@@ -522,3 +522,10 @@ nav.categories {
     max-width: 250px; /* Restricts its size */
     overflow: auto; /* Ensures content inside doesn’t overflow */
 }
+@media screen and (max-width: 768px) {
+    .mantra-generator {
+        position: static; /* Removes fixed positioning */
+        margin: 20px auto; /* Centers it */
+        max-width: 90%; /* Adjusts width for small screens */
+    }
+}
