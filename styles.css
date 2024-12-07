@@ -141,3 +141,25 @@ html, body {
     margin: 0;
     padding: 0;
 }
+/* Ensure the body element has a background image */
+body {
+    background-image: url('images/background.jpg'); /* Update the path as needed */
+    background-size: cover;  /* Ensures the background image covers the area */
+    background-position: center center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    color: white;  /* Ensures the text is readable against the background */
+}
+
+/* Main content area: Increase the height to show more of the background image */
+.main-content {
+    min-height: 500px;  /* Adjust this value to your liking (in pixels or percentage) */
+    padding: 20px;  /* Add padding inside the content */
+    background: rgba(0, 0, 0, 0.5);  /* Optional: Adds a dark semi-transparent overlay to improve readability */
+}
+
+/* Optional: You can increase the height of specific sections if needed */
+section {
+    min-height: 400px;  /* Adjust depending on how big you want the section to be */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);  /* Optional: light overlay for readability */
+}
