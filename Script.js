@@ -82,3 +82,26 @@ function generateMantra() {
     // Display the mantra
     document.getElementById('mantra-display').textContent = randomMantra;
 }
+// JavaScript for Mantra Generator
+document.addEventListener("DOMContentLoaded", () => {
+    const mantras = [
+        "Dream big and dare to fail.",
+        "Your dreams are valid.",
+        "Believe in yourself and all that you are.",
+        "Success is the progressive realization of a worthy dream.",
+        "The future belongs to those who believe in the beauty of their dreams.",
+        "Every great dream begins with a dreamer."
+    ];
+
+    const mantraDisplay = document.getElementById("mantra-display");
+    const mantraButton = document.querySelector(".mantra-generator button");
+
+    // Function to generate a random mantra
+    const generateMantra = () => {
+        const randomIndex = Math.floor(Math.random() * mantras.length);
+        mantraDisplay.textContent = mantras[randomIndex];
+    };
+
+    // Add event listener to the button
+    mantraButton.addEventListener("click", generateMantra);
+});
