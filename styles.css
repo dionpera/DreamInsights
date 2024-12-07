@@ -105,3 +105,11 @@ section h2 {
 section h3 {
     font-size: 1.5em;
 }
+/* Styling for the submenu heading */
+nav.submenu h2 {
+    color: #000000; /* Black text for readability */
+    font-size: 1.8em; /* Adjust size as needed */
+    font-weight: bold; /* Optional, adds emphasis */
+    margin-top: 10px; /* Adjust spacing as needed */
+    margin-bottom: 10px;
+}
