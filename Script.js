@@ -65,3 +65,20 @@ document.querySelectorAll('nav ul li a').forEach(link => {
         link.classList.add('active');
     }
 });
+function generateMantra() {
+    const mantras = [
+        "I embrace the flow of life and trust in my journey.",
+        "My dreams guide me toward my true purpose.",
+        "I release what no longer serves me and welcome peace.",
+        "I am grounded, strong, and deeply connected to myself.",
+        "My emotions flow freely and guide me to clarity.",
+        "I see the beauty in every stage of life.",
+        "I am open to love, growth, and endless possibilities."
+    ];
+
+    // Generate a random mantra
+    const randomMantra = mantras[Math.floor(Math.random() * mantras.length)];
+
+    // Display the mantra
+    document.getElementById('mantra-display').textContent = randomMantra;
+}
