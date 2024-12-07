@@ -151,6 +151,7 @@ body {
     margin: 0;  /* Removes default margin */
     padding: 0;  /* Removes default padding */
 }
+
 /* Styling for the menu (e.g., submenu, main menu, etc.) */
 nav.submenu {
     background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
