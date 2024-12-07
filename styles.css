@@ -441,6 +441,7 @@ footer {
     background-color: #ddd; /* Light grey background on hover */
     color: #000; /* Black text color on hover */
 }
+/* Hover effect for mantra-widge links */
 /* Ensure there’s enough space between the menu and the mantra-widget */
 .mantra-widget {
     text-align: center;
