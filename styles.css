@@ -453,3 +453,23 @@ footer {
     width: 100%;
     bottom: 0;
 }
+.mantra-widget {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mantra-widget h2 {
+    color: #4A90E2;
+    font-size: 1.5em;
+}
+
+.mantra-widget p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
