@@ -105,3 +105,25 @@ document.addEventListener("DOMContentLoaded", () => {
     // Add event listener to the button
     mantraButton.addEventListener("click", generateMantra);
 });
+// script.js
+document.getElementById("generateMantraButton").addEventListener("click", function() {
+  // Array of mantras
+  const mantras = [
+    "I am the master of my fate.",
+    "Peace begins with a smile.",
+    "The only way out is through.",
+    "You are enough just as you are.",
+    "Let it go, and let yourself grow.",
+    "Breathe in calm, breathe out stress.",
+    "Every day is a new beginning.",
+    "This too shall pass.",
+    "I attract positivity and abundance.",
+    "I am grateful for this moment."
+  ];
+
+  // Function to pick a random mantra
+  const randomMantra = mantras[Math.floor(Math.random() * mantras.length)];
+
+  // Display the generated mantra
+  document.getElementById("mantraDisplay").textContent = randomMantra;
+});
