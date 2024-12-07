@@ -135,3 +135,37 @@ body {
 .home-button:hover {
     background-color: #555;
 }
+/* Ensure the body and html elements take up the full height of the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Add a background image that covers the entire viewport */
+body {
+    background-image: url('images/background.jpg'); /* Update the path as needed */
+    background-size: cover;  /* Ensures the background image covers the entire page */
+    background-position: center center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    color: white;  /* Ensures the text is readable against the background */
+}
+
+/* Make the content section taller if necessary */
+.main-content {
+    min-height: 100vh;  /* Makes sure the content section takes at least the full height of the screen */
+    padding: 20px;  /* Adds some padding */
+    background: rgba(0, 0, 0, 0.5);  /* Optional: Adds a semi-transparent background to improve text readability */
+}
+
+/* Optional: If you have a header, make sure it doesn't overlap the content */
+header {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);  /* Optional: semi-transparent background for better text readability */
+}
+
+header h1 {
+    color: white;
+}
