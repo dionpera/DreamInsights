@@ -1,160 +1,63 @@
-/* General Body Styles */
+/* styles.css */
+
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0e6f7; /* Lavender color for the background */
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    color: #333;
 }
 
-/* Header Styles */
-header {
-    background-color: #6a4c9c; /* A deep lavender */
-    color: white;
-    padding: 20px;
+/* Container for centered content */
+.header-container {
     text-align: center;
+    padding: 20px;  /* Space around the header content */
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+/* Add space between the title and the quote */
+.header-container h1 {
+    margin-bottom: 20px;  /* Space below the header title */
 }
 
-header .quote {
+/* Add space between the quote and the other sections */
+.header-container .quote {
+    margin-bottom: 30px;  /* Space below the quote */
     font-style: italic;
-    margin-top: 10px;
+    color: #555;
 }
 
-header .home-button {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    background-color: #4c3484;
-    padding: 10px 15px;
-    border-radius: 5px;
-    margin-top: 15px;
-    display: inline-block;
+/* Add some space between sections */
+section {
+    margin: 40px 0;  /* Space above and below sections */
+    padding: 0 20px;  /* Padding inside sections */
 }
 
-header .home-button:hover {
-    background-color: #3e2a61;
+/* Space between paragraphs */
+section p {
+    margin-bottom: 20px;  /* Space below each paragraph */
 }
 
-/* Footer Styles */
+/* Footer styles */
 footer {
     text-align: center;
-    padding: 15px;
-    background-color: #6a4c9c;
-    color: white;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
-/* Meaning Section Styles */
-.meaning {
-    padding: 20px;
+.home-button {
     margin-top: 20px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.meaning h2 {
-    font-size: 2rem;
-    color: #4c3484;
-}
-
-.meaning p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
-}
-
-/* Submenu Page Styles */
-.submenu {
-    padding: 20px;
-    background-color: #e3d4f1;
-    border-radius: 5px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.submenu h2 {
-    font-size: 1.8rem;
-    color: #6a4c9c;
-}
-
-.submenu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.submenu ul li {
-    margin-bottom: 10px;
-}
-
-.submenu ul li a {
-    text-decoration: none;
-    color: #4c3484;
-    font-size: 1.2rem;
-}
-
-.submenu ul li a:hover {
-    color: #6a4c9c;
-}
-
-/* Active Class for Toggleable Sections */
-.active {
-    display: block;
-}
-
-.hidden {
-    display: none;
-}
-
-/* Styles for Navigation Menu */
-nav.categories {
-    text-align: center;
-    margin: 30px 0;
-}
-
-nav.categories a {
-    text-decoration: none;
-    color: #4c3484;
-    font-size: 1.2rem;
-    margin: 0 15px;
+    display: inline-block;
     padding: 10px 20px;
-    background-color: #e3d4f1;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
     border-radius: 5px;
 }
 
-nav.categories a:hover {
-    background-color: #4c3484;
-    color: white;
-}
-
-/* General Layout Adjustment */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Mobile Friendly */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .meaning, .submenu {
-        margin-top: 10px;
-        padding: 15px;
-    }
-
-    .home-button {
-        font-size: 1rem;
-        padding: 8px 12px;
-    }
+.home-button:hover {
+    background-color: #555;
 }
