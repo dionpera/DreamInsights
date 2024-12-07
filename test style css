@@ -1,0 +1,10 @@
+/* Test CSS */
+body {
+    background-color: lavender;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: darkviolet;
+    text-align: center;
+}
