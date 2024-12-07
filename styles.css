@@ -500,6 +500,17 @@ body {
     display: flex;
     flex-direction: column;
 }
+.mantra-generator {
+    position: fixed; /* Keeps it fixed on the right even during scroll */
+    top: 20%; /* Adjust this for vertical alignment */
+    right: 20px; /* Distance from the right edge */
+    background-color: rgba(255, 255, 255, 0.9); /* White semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensures it stays on top of other elements */
+    max-width: 250px;
+}
 
 .content {
     flex: 1; /* Allows content to expand and push the footer down */
