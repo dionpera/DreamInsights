@@ -64,7 +64,7 @@ footer {
 }
 /* General body background and text color */
 body {
-    background-image: url('images/background.jpg'); /* Replace with your image path */
+    background-image: url('images/background.jpg.png'); /* Replace with your image path */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
