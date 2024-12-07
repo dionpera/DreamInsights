@@ -121,3 +121,17 @@ body {
     background-repeat: no-repeat; /* Prevents the image from repeating */
     font-family: Arial, sans-serif; /* Set the font for better readability */
 }
+/* Add this to your styles.css to style the home button */
+.home-button {
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.home-button:hover {
+    background-color: #555;
+}
