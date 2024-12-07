@@ -495,3 +495,13 @@ footer {
     color: #333;
     margin-bottom: 20px;
 }
+body {
+    min-height: 100vh; /* Ensures the body spans the entire viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1; /* Allows content to expand and push the footer down */
+    margin-bottom: 50px; /* Adds space above the footer */
+}
