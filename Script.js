@@ -164,3 +164,21 @@ document.getElementById("generateMantraButton").addEventListener("click", functi
   // Display the generated mantra
   document.getElementById("mantraDisplay").textContent = randomMantra;
 });
+<script>
+  // Function to create stars
+  function createStars() {
+    const starContainer = document.querySelector('.stars');
+    
+    for (let i = 0; i < 10; i++) { // Number of stars
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.top = `${Math.random() * 50}px`; // Random position within the container
+      star.style.left = `${Math.random() * 50}px`;
+      star.style.animationDelay = `${Math.random() * 2}s`; // Staggered animations
+      starContainer.appendChild(star);
+    }
+  }
+
+  // Initialize stars
+  createStars();
+</script>
