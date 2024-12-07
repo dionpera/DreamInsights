@@ -62,3 +62,11 @@ footer {
 .home-button:hover {
     background-color: #555;
 }
+body {
+    background-image: url('images/background.jpg'); /* or background.png */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #ffffff; /* Adjust text color for readability */
+}
