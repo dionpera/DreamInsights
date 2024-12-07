@@ -529,3 +529,48 @@ nav.categories {
         max-width: 90%; /* Adjusts width for small screens */
     }
 }
+/* Ensure the body element spans the full height of the viewport */
+body {
+    min-height: 100vh; /* Ensures the body spans the entire viewport height */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* The main content should expand and fill the available space */
+.content {
+    flex-grow: 1; /* Makes sure the content grows and pushes footer */
+    padding: 20px;
+}
+
+/* Mantra Generator - Position fixed but ensure it's not interfering with the scroll */
+.mantra-generator {
+    position: fixed;
+    top: 20%; /* Adjust this value for proper vertical alignment */
+    right: 20px; /* Distance from the right edge */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Keeps it on top of other elements */
+    max-width: 250px;
+    width: 100%; /* Ensures responsiveness */
+    overflow: hidden;
+}
+
+/* Ensure there’s enough space below the content and above the footer */
+footer {
+    margin-top: 40px; /* Adds space between the footer and the content */
+    position: relative;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+/* Optional: Add margin to main content or adjust as needed */
+section {
+    margin-bottom: 80px; /* Add margin at the bottom of the section */
+}
