@@ -1,47 +1,48 @@
 /* styles.css */
 
-/* Global Styles */
+/* Set the background color of the page */
 body {
+    background-color: #f4f4f4; /* Light grey background */
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    color: #333; /* Default text color */
 }
 
-/* Container for centered content */
+/* Header Section */
 .header-container {
+    background-color: #6a4c93; /* Lavender background */
     text-align: center;
-    padding: 20px;  /* Space around the header content */
+    padding: 40px;  /* Space around the header content */
+    color: white; /* Text color in the header */
 }
 
-/* Add space between the title and the quote */
 .header-container h1 {
-    margin-bottom: 20px;  /* Space below the header title */
+    margin-bottom: 20px;
 }
 
-/* Add space between the quote and the other sections */
 .header-container .quote {
-    margin-bottom: 30px;  /* Space below the quote */
+    margin-bottom: 30px;
     font-style: italic;
-    color: #555;
+    color: #d9d9d9;  /* Light grey color for the quote */
 }
 
-/* Add some space between sections */
+/* Section Styling */
 section {
-    margin: 40px 0;  /* Space above and below sections */
-    padding: 0 20px;  /* Padding inside sections */
+    margin: 40px 0;  /* Space between sections */
+    padding: 0 20px;
 }
 
-/* Space between paragraphs */
+/* Add some space between paragraphs */
 section p {
-    margin-bottom: 20px;  /* Space below each paragraph */
+    margin-bottom: 20px;
 }
 
-/* Footer styles */
+/* Footer Section */
 footer {
     text-align: center;
-    background-color: #333;
-    color: #fff;
+    background-color: #333; /* Dark footer */
+    color: white;
     padding: 10px;
     position: fixed;
     width: 100%;
