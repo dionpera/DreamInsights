@@ -188,3 +188,39 @@ nav.submenu ul li a:hover {
     background-color: #ddd; /* Light grey background on hover */
     color: #000; /* Change text color to black */
 }
+/* Styling for the main menu on the landing page */
+nav.categories {
+    background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
+    padding: 20px;
+    border-radius: 8px; /* Optional rounded corners */
+    margin: 20px auto; /* Center the menu */
+    max-width: 800px; /* Limit width for readability */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for a clean look */
+}
+
+/* Menu items (links inside the menu) */
+nav.categories ul {
+    list-style: none; /* Removes the default list styling */
+    padding: 0;
+}
+
+nav.categories ul li {
+    margin-bottom: 10px; /* Add space between menu items */
+}
+
+nav.categories ul li a {
+    text-decoration: none;
+    color: #333; /* Dark color for the links */
+    font-weight: bold; /* Bold links */
+    font-size: 1.2em; /* Slightly larger font for readability */
+    display: block; /* Make the link fill the list item */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners for each link */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for menu items */
+nav.categories ul li a:hover {
+    background-color: #ddd; /* Light grey background on hover */
+    color: #000; /* Change text color to black */
+}
