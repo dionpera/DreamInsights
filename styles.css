@@ -296,3 +296,7 @@ nav.submenu ul li a:hover {
     background-color: #ddd; /* Light grey background on hover */
     color: #000; /* Change text color to black */
 }
+/* Ensure consistent font across all pages */
+body {
+    font-family: Arial, sans-serif; /* Use Arial or any other font you prefer */
+}
