@@ -59,3 +59,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+// Example: Adding 'active' class to the current page link
+document.querySelectorAll('nav ul li a').forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add('active');
+    }
+});
