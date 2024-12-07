@@ -77,3 +77,40 @@
     <script src="script.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Management</title>
+    <script src="https://cdn.jsdelivr.net/npm/netlify-cms@2.14.0/dist/netlify-cms.js"></script>
+</head>
+<body>
+    <script>
+        NetlifyCms.init({
+            config: {
+                backend: {
+                    name: 'github',
+                    repo: 'yourusername/yourrepository',  // Replace with your GitHub username and repo
+                    branch: 'main',
+                },
+                media_folder: 'static/uploads',
+                public_folder: '/uploads',
+                collections: [
+                    {
+                        name: 'dreams',
+                        label: 'Dream Meanings',
+                        folder: '',  // No subfolders, use flat structure
+                        create: true,
+                        fields: [
+                            { label: 'Title', name: 'title', widget: 'string' },
+                            { label: 'Description', name: 'description', widget: 'text' },
+                            { label: 'Category', name: 'category', widget: 'select', options: ['Animals', 'Places', 'Relationships', 'Properties'] },
+                        ],
+                    },
+                ],
+            }
+        });
+    </script>
+</body>
+</html>
