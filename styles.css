@@ -115,7 +115,7 @@ nav.submenu h2 {
 }
 /* Apply background to the whole page */
 body {
-    background-image: url('images/background.jpg.png'); /* Path to your image */
+    background-image: url('images/background.jpg'); /* Path to your image */
     background-size: cover; /* Makes sure the image covers the whole page */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
