@@ -63,7 +63,7 @@ footer {
     background-color: #555;
 }
 body {
-    background-image: url('images/background.jpg'); /* or background.png */
+    background-image: url('background.jpg.png'); /* or background.png */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
