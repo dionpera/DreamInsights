@@ -83,3 +83,25 @@ section {
     max-width: 800px; /* Restrict width for better readability */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for a clean look */
 }
+/* General heading styles for sections */
+section h1, section h2, section h3, section h4, section h5, section h6 {
+    color: #000000; /* Black for readability */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Optional: Specific styles for headings in sections */
+section h1 {
+    font-size: 2em; /* Adjust as needed */
+    font-weight: bold;
+}
+
+section h2 {
+    font-size: 1.8em; /* Adjust as needed */
+    font-weight: bold;
+    text-decoration: underline; /* Optional, adds emphasis */
+}
+
+section h3 {
+    font-size: 1.5em;
+}
