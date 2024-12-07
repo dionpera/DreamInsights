@@ -542,3 +542,46 @@ footer {
 section {
     margin-bottom: 80px; /* Ensures enough space below content */
 }
+/* Style for the header */
+.site-header {
+  position: relative;
+  background: #1e1e2f; /* Adjust to match your site's theme */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Stars container */
+.stars {
+  position: absolute;
+  top: 10px; /* Adjust to position near the left corner */
+  left: 10px;
+  width: 50px; /* Adjust for the desired size of the star effect */
+  height: 50px;
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* Individual star */
+.star {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: radial-gradient(circle, white, rgba(255, 255, 255, 0.2));
+  border-radius: 50%;
+  animation: sparkle 2s infinite ease-in-out;
+  opacity: 0;
+}
+
+/* Sparkle animation */
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
