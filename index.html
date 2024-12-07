@@ -41,13 +41,88 @@
     <button onclick="generateMantra()">Generate Mantra</button>
 </div>
 
-
-
-
-
-
-
  <footer>
         <p>© 2024 Dream Insight. All rights reserved.</p>
     </footer>
 </body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mantra Generator</title>
+  <style>
+    /* Mantra Generator Styling */
+    .mantra-generator {
+        position: fixed;
+        top: 20%;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        max-width: 250px;
+        width: 100%;
+    }
+
+    .mantra-generator button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .mantra-generator button:hover {
+        background-color: #45a049;
+    }
+
+    .mantra-generator p {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- HTML content for the Mantra Generator -->
+  <div class="mantra-generator">
+    <h3>Mantra Generator</h3>
+    <button id="generateMantraButton">Generate Mantra</button>
+    <p id="mantraDisplay">Your mantra will appear here...</p>
+  </div>
+
+  <!-- JavaScript for the Mantra Generator -->
+  <script>
+    document.getElementById("generateMantraButton").addEventListener("click", function() {
+      // Array of mantras
+      const mantras = [
+        "I am the master of my fate.",
+        "Peace begins with a smile.",
+        "The only way out is through.",
+        "You are enough just as you are.",
+        "Let it go, and let yourself grow.",
+        "Breathe in calm, breathe out stress.",
+        "Every day is a new beginning.",
+        "This too shall pass.",
+        "I attract positivity and abundance.",
+        "I am grateful for this moment."
+      ];
+
+      // Function to pick a random mantra
+      const randomMantra = mantras[Math.floor(Math.random() * mantras.length)];
+
+      // Display the generated mantra
+      document.getElementById("mantraDisplay").textContent = randomMantra;
+    });
+  </script>
+</body>
+</html>
+
