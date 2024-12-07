@@ -62,11 +62,24 @@ footer {
 .home-button:hover {
     background-color: #555;
 }
+/* General body background and text color */
 body {
-    background-image: url('background.jpg.png'); /* or background.png */
+    background-image: url('images/background.jpg'); /* Replace with your image path */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    color:  #333; /* Adjust text color for readability */
+    color: #ffffff; /* Default text color (white for header, footer) */
+    font-family: Arial, sans-serif; /* Ensure a clean font */
+}
+
+/* Override text color for main content for readability */
+section {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+    color: #000000; /* Black text color for contrast */
+    padding: 20px;
+    border-radius: 8px; /* Optional rounded corners */
+    margin: 20px auto;
+    max-width: 800px; /* Restrict width for better readability */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for a clean look */
 }
