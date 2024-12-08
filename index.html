@@ -5,163 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dream Insight</title>
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-
-        header {
-            text-align: center;
-            background-color: #282c34;
-            color: white;
-            padding: 20px 10px;
-            position: relative;
-        }
-
-        .quote {
-            font-style: italic;
-            font-size: 16px;
-            margin: 5px 0;
-        }
-
-        .home-button {
-            display: inline-block;
-            padding: 10px 15px;
-            background-color: #800080; /* Purple color */
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .home-button:hover {
-            background-color: #660066; /* Darker purple on hover */
-        }
-
-        .introduction {
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Vertical Menu Styling */
-        .categories ul {
-            list-style-type: none;
-            padding: 0;
-            text-align: center;
-            display: flex;
-            flex-direction: column; /* This makes the links display vertically */
-            align-items: center; /* Center align the links */
-        }
-
-        .categories ul li {
-            margin: 10px 0; /* Adds spacing between the vertical links */
-        }
-
-        /* Ensures the links are white and without purple background */
-        .categories ul li a {
-            text-decoration: none;
-            padding: 10px 15px;
-            color: white; /* Link text color should be white */
-            background-color: transparent; /* No purple background */
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .categories ul li a:hover {
-            background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #282c34;
-            color: white;
-        }
-
-        /* Stars Animation */
-        .stars {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0; /* Ensure stars are behind other content */
-        }
-
-        .star {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background-color: white;
-            border-radius: 50%;
-            animation: twinkle 2s infinite ease-in-out;
-        }
-
-        @keyframes twinkle {
-            0%, 100% {
-                opacity: 0.5;
-            }
-            50% {
-                opacity: 1;
-            }
-        }
-
-        /* Purple Buttons (Mantra & Music Controls) */
-        button {
-            background-color: #800080; /* Purple */
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            margin: 5px;
-        }
-
-        button:hover {
-            background-color: #660066; /* Darker purple on hover */
-        }
-
-        .mantra-generator {
-            position: fixed;
-            top: 20%;
-            right: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            max-width: 250px;
-            width: 100%;
-            text-align: center; /* Centers the content inside the mantra generator */
-        }
-
-        .mantra-generator p {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-            text-align: center;
-        }
-
-        /* Music Controls */
-        .music-controls {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-    </style>
 </head>
 <body>
+
     <header>
         <div class="header-container">
             <h1>Dream Insight</h1>
@@ -169,7 +15,6 @@
             <!-- Home Button -->
             <a href="index.html" class="home-button">Home</a>
         </div>
-        <div class="stars"></div> <!-- Ensure stars are inside header -->
     </header>
 
     <section class="introduction">
@@ -177,7 +22,7 @@
         <p>At Dream Insight, we help you understand the hidden meanings behind your dreams, whether they are about animals, relationships, places, or more. Explore your dreams and find their spiritual significance.</p>
     </section>
 
-    <!-- Transparent Menu Box with Vertical Links -->
+    <!-- Transparent Menu Box -->
     <nav class="categories">
         <ul>
             <li><a href="animals.html">Animals</a></li>
@@ -188,23 +33,76 @@
         </ul>
     </nav>
 
-    <footer>
-        <p>© 2024 Dream Insight. All rights reserved.</p>
-    </footer>
-
-    <!-- Mantra Generator Section -->
+    <!-- Mantra Generator and Audio Controls -->
     <div class="mantra-generator">
         <h3>Mantra Generator</h3>
         <button id="generateMantraButton">Generate Mantra</button>
         <p id="mantraDisplay">Your mantra will appear here...</p>
     </div>
 
-    <!-- JavaScript for the Mantra Generator -->
+    <audio id="backgroundMusic" loop>
+        <source src="meditative.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="music-controls">
+        <button id="playButton" aria-label="Play background music">Play</button>
+        <button id="pauseButton" aria-label="Pause background music" style="display: none;">Pause</button>
+        <input id="volumeControl" type="range" min="0" max="1" step="0.1" value="0.5" aria-label="Volume control">
+    </div>
+
+    <footer>
+        <p>© 2024 Dream Insight. All rights reserved.</p>
+    </footer>
+
     <script>
-        document.getElementById("generateMantraButton").addEventListener("click", function() {
-            // Array of mantras
+        // Initialize the audio element
+        const audio = document.getElementById('backgroundMusic');
+
+        // Get the buttons and volume control
+        const playButton = document.getElementById('playButton');
+        const pauseButton = document.getElementById('pauseButton');
+        const volumeControl = document.getElementById('volumeControl');
+
+        // Function to play the audio
+        function playAudio() {
+            audio.play().then(() => {
+                playButton.style.display = 'none';
+                pauseButton.style.display = 'block';
+            }).catch(err => {
+                console.error("Error playing the audio: ", err);
+            });
+        }
+
+        // Function to pause the audio
+        function pauseAudio() {
+            audio.pause();
+            playButton.style.display = 'block';
+            pauseButton.style.display = 'none';
+        }
+
+        // Play Button Event Listener
+        playButton.addEventListener('click', playAudio);
+
+        // Pause Button Event Listener
+        pauseButton.addEventListener('click', pauseAudio);
+
+        // Volume Control Event Listener
+        volumeControl.addEventListener('input', function (event) {
+            audio.volume = event.target.value;
+        });
+
+        // Make sure the audio starts playing when the user clicks anywhere on the page
+        document.body.addEventListener('click', function () {
+            if (audio.paused) {
+                playAudio();
+            }
+        }, { once: true });
+
+        // Mantra Generator Code
+        document.getElementById("generateMantraButton").addEventListener("click", function () {
             const mantras = [
-                "I am the master of my fate.",
+               "I am the master of my fate.",
                 "Peace begins with a smile.",
                 "The only way out is through.",
                 "You are enough just as you are.",
@@ -248,83 +146,12 @@
                 "I have the courage to embrace my uniqueness and shine."
             ];
 
-            // Generate a random mantra
             const randomMantra = mantras[Math.floor(Math.random() * mantras.length)];
-
-            // Display the generated mantra
             document.getElementById("mantraDisplay").textContent = randomMantra;
         });
     </script>
 
-    <!-- Function to create stars -->
-    <script>
-        function createStars() {
-            const starContainer = document.querySelector('.stars');
-            
-            for (let i = 0; i < 50; i++) { // Number of stars
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.top = `${Math.random() * 100}%`; // Random position within the container
-                star.style.left = `${Math.random() * 100}%`;
-                star.style.animationDelay = `${Math.random() * 2}s`; // Staggered animations
-                starContainer.appendChild(star);
-            }
-        }
+</body>
+</html>
 
-        // Initialize stars
-        createStars();
-    </script>
 
-<!-- HTML Part -->
-<audio id="backgroundMusic" loop>
-    <source src="meditative.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
-
-<div class="music-controls">
-    <button id="playButton" aria-label="Play background music">Play</button>
-    <button id="pauseButton" aria-label="Pause background music">Pause</button>
-    <input id="volumeControl" type="range" min="0" max="1" step="0.1" value="0.5" aria-label="Volume control">
-</div>
-
-<script>
-    // Create the audio element dynamically using JavaScript
-    const audio = new Audio('meditative.mp3');
-    audio.loop = true;  // Set the audio to loop
-
-    // Get the buttons and volume control
-    const playButton = document.getElementById("playButton");
-    const pauseButton = document.getElementById("pauseButton");
-    const volumeControl = document.getElementById("volumeControl");
-
-    // Hide the pause button initially
-    pauseButton.style.display = "none";
-
-    // Play Button Functionality
-    playButton.addEventListener("click", function() {
-        audio.play();  // Play the audio
-        playButton.style.display = "none";  // Hide play button
-        pauseButton.style.display = "block";  // Show pause button
-    });
-
-    // Pause Button Functionality
-    pauseButton.addEventListener("click", function() {
-        audio.pause();  // Pause the audio
-        playButton.style.display = "block";  // Show play button
-        pauseButton.style.display = "none";  // Hide pause button
-    });
-
-    // Volume Control Functionality
-    volumeControl.addEventListener("input", function(event) {
-        audio.volume = event.target.value;  // Adjust the audio volume
-    });
-
-    // Start audio playback after the user interacts with the page (click anywhere)
-    document.body.addEventListener('click', function() {
-        if (audio.paused) {
-            audio.play();  // Start the music if it's not playing
-            playButton.style.display = "none";  // Hide play button
-            pauseButton.style.display = "block";  // Show pause button
-        }
-    }, { once: true });  // Ensures this only runs once after the first interaction
-</script>
