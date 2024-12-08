@@ -62,17 +62,18 @@
             margin: 10px 0; /* Adds spacing between the vertical links */
         }
 
-        /* Ensure link words are white */
+        /* Ensures the links are white and without purple background */
         .categories ul li a {
             text-decoration: none;
             padding: 10px 15px;
-            background-color: #800080; /* Purple */
             color: white; /* Link text color should be white */
+            background-color: transparent; /* No purple background */
             border-radius: 5px;
+            font-weight: bold;
         }
 
         .categories ul li a:hover {
-            background-color: #660066; /* Darker purple on hover */
+            background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
         }
 
         footer {
@@ -266,11 +267,6 @@
         document.getElementById("volumeControl").addEventListener("input", function(event) {
             document.getElementById("backgroundMusic").volume = event.target.value;
         });
-
-        // Start music after interaction if autoplay is blocked
-        document.body.addEventListener('click', function() {
-            document.getElementById("backgroundMusic").play();
-        }, { once: true });
     </script>
 </body>
 </html>
