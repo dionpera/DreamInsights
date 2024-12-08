@@ -1,12 +1,45 @@
-/* styles.css */
-
-/* Set the background color of the page */
-body {
-    background-color: #f4f4f4; /* Light grey background */
-    font-family: Arial, sans-serif;
+/* Basic Reset */
+* {
     margin: 0;
     padding: 0;
-    color: #333; /* Default text color */
+    box-sizing: border-box;
+}
+
+/* General body background and text color */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure the body element spans the full height of the viewport */
+html, body {
+    height: 100%;
+}
+
+/* Main content should expand and fill the available space */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Section Styling */
+section {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+    color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section h1, section h2, section h3, section h4, section h5, section h6 {
+    color: #000000;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* Header Section */
@@ -14,7 +47,7 @@ body {
     background-color: #6a4c93; /* Lavender background */
     text-align: center;
     padding: 40px;  /* Space around the header content */
-    color: white; /* Text color in the header */
+    color: white;
 }
 
 .header-container h1 {
@@ -27,21 +60,10 @@ body {
     color: #d9d9d9;  /* Light grey color for the quote */
 }
 
-/* Section Styling */
-section {
-    margin: 40px 0;  /* Space between sections */
-    padding: 0 20px;
-}
-
-/* Add some space between paragraphs */
-section p {
-    margin-bottom: 20px;
-}
-
 /* Footer Section */
 footer {
     text-align: center;
-    background-color: #333; /* Dark footer */
+    background-color: #333;
     color: white;
     padding: 10px;
     position: fixed;
@@ -49,83 +71,11 @@ footer {
     bottom: 0;
 }
 
+/* Home Button */
 .home-button {
-    margin-top: 20px;
-    display: inline-block;
-    padding: 10px 20px;
+    text-decoration: none;
     background-color: #333;
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.home-button:hover {
-    background-color: #555;
-}
-/* General body background and text color */
-body {
-    background-image: url('images/background.jpg.png'); /* Replace with your image path */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    color: #ffffff; /* Default text color (white for header, footer) */
-    font-family: Arial, sans-serif; /* Ensure a clean font */
-}
-
-/* Override text color for main content for readability */
-section {
-    background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
-    color: #000000; /* Black text color for contrast */
-    padding: 20px;
-    border-radius: 8px; /* Optional rounded corners */
-    margin: 20px auto;
-    max-width: 800px; /* Restrict width for better readability */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for a clean look */
-}
-/* General heading styles for sections */
-section h1, section h2, section h3, section h4, section h5, section h6 {
-    color: #000000; /* Black for readability */
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-/* Optional: Specific styles for headings in sections */
-section h1 {
-    font-size: 2em; /* Adjust as needed */
-    font-weight: bold;
-}
-
-section h2 {
-    font-size: 1.8em; /* Adjust as needed */
-    font-weight: bold;
-    text-decoration: underline; /* Optional, adds emphasis */
-}
-
-section h3 {
-    font-size: 1.5em;
-}
-/* Styling for the submenu heading */
-nav.submenu h2 {
-    color: #000000; /* Black text for readability */
-    font-size: 1.8em; /* Adjust size as needed */
-    font-weight: bold; /* Optional, adds emphasis */
-    margin-top: 10px; /* Adjust spacing as needed */
-    margin-bottom: 10px;
-}
-/* Apply background to the whole page */
-body {
-    background-image: url('images/background.jpg'); /* Path to your image */
-    background-size: cover; /* Makes sure the image covers the whole page */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    font-family: Arial, sans-serif; /* Set the font for better readability */
-}
-/* Add this to your styles.css to style the home button */
-.home-button {
-    text-decoration: none;
-    background-color: #333;
-    color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     display: inline-block;
@@ -135,218 +85,27 @@ body {
 .home-button:hover {
     background-color: #555;
 }
-/* Ensure the body and html elements take up the full height of the viewport */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-/* Ensure the body element has a background image */
-body {
-    background-image: url('images/background.jpg'); /* Update the path as needed */
-    background-size: cover;  /* Ensures the background image covers the area */
-    background-position: center center;  /* Centers the image */
-    background-repeat: no-repeat;  /* Prevents the image from repeating */
-    color: white;  /* Ensures the text is readable against the background */
-    margin: 0;  /* Removes default margin */
-    padding: 0;  /* Removes default padding */
-}
 
-/* Styling for the menu (e.g., submenu, main menu, etc.) */
-nav.submenu {
-    background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
-    padding: 20px;
-    border-radius: 8px; /* Optional rounded corners */
-    margin: 20px auto; /* Center the menu on the page */
-    max-width: 800px; /* Limit width for readability */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for a clean look */
-}
-
-/* Menu items (links inside the menu) */
-nav.submenu ul {
-    list-style: none; /* Removes the default list styling */
-    padding: 0;
-}
-
-nav.submenu ul li {
-    margin-bottom: 10px; /* Add space between menu items */
-}
-
-nav.submenu ul li a {
-    text-decoration: none;
-    color: #333; /* Dark color for the links */
-    font-weight: bold; /* Bold links */
-    font-size: 1.2em; /* Slightly larger font for readability */
-    display: block; /* Make the link fill the list item */
-    padding: 10px;
-    border-radius: 5px; /* Rounded corners for each link */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-/* Hover effect for menu items */
-nav.submenu ul li a:hover {
-    background-color: #ddd; /* Light grey background on hover */
-    color: #000; /* Change text color to black */
-}
-/* Styling for the main menu on the landing page */
+/* Main Navigation Menu */
 nav.categories {
-    background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
-    border-radius: 8px; /* Optional rounded corners */
-    margin: 20px auto; /* Center the menu */
-    max-width: 800px; /* Limit width for readability */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for a clean look */
-}
-
-/* Menu items (links inside the menu) */
-nav.categories ul {
-    list-style: none; /* Removes the default list styling */
-    padding: 0;
-}
-
-nav.categories ul li {
-    margin-bottom: 10px; /* Add space between menu items */
-}
-
-nav.categories ul li a {
-    text-decoration: none;
-    color: #333; /* Dark color for the links */
-    font-weight: bold; /* Bold links */
-    font-size: 1.2em; /* Slightly larger font for readability */
-    display: block; /* Make the link fill the list item */
-    padding: 10px;
-    border-radius: 5px; /* Rounded corners for each link */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-/* Hover effect for menu items */
-nav.categories ul li a:hover {
-    background-color: #ddd; /* Light grey background on hover */
-    color: #000; /* Change text color to black */
-}
-/* Styling for the submenu (applies to all menus) */
-nav.submenu {
-    background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
-    padding: 20px;
-    border-radius: 8px; /* Optional rounded corners */
-    margin: 20px auto; /* Center the menu */
-    max-width: 800px; /* Limit width for readability */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for a clean look */
-}
-
-/* Menu items (links inside the menu) */
-nav.submenu ul {
-    list-style: none; /* Removes the default list styling */
-    padding: 0;
-}
-
-nav.submenu ul li {
-    margin-bottom: 10px; /* Add space between menu items */
-}
-
-nav.submenu ul li a {
-    text-decoration: none;
-    color: #333; /* Dark color for the links */
-    font-weight: bold; /* Bold links */
-    font-size: 1.2em; /* Slightly larger font for readability */
-    display: block; /* Make the link fill the list item */
-    padding: 10px;
-    border-radius: 5px; /* Rounded corners for each link */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-/* Hover effect for menu items */
-nav.submenu ul li a:hover {
-    background-color: #ddd; /* Light grey background on hover */
-    color: #000; /* Change text color to black */
-}
-/* Styling for the submenu (applies to all menus) */
-nav.submenu {
-    background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
-    padding: 20px;
-    border-radius: 8px; /* Optional rounded corners */
-    margin: 20px auto; /* Center the menu */
-    max-width: 800px; /* Limit width for readability */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for a clean look */
-}
-
-/* Menu items (links inside the menu) */
-nav.submenu ul {
-    list-style: none; /* Removes the default list styling */
-    padding: 0;
-}
-
-nav.submenu ul li {
-    margin-bottom: 10px; /* Add space between menu items */
-}
-
-nav.submenu ul li a {
-    text-decoration: none;
-    color: #333; /* Dark color for the links */
-    font-weight: bold; /* Bold links */
-    font-size: 1.2em; /* Slightly larger font for readability */
-    display: block; /* Make the link fill the list item */
-    padding: 10px;
-    border-radius: 5px; /* Rounded corners for each link */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-/* Hover effect for menu items */
-nav.submenu ul li a:hover {
-    background-color: #ddd; /* Light grey background on hover */
-    color: #000; /* Change text color to black */
-}
-/* Ensure consistent font across all pages */
-body {
-    font-family: Arial, sans-serif; /* Use Arial or any other font you prefer */
-}
-/* General body background and text color */
-body {
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-/* Header Section */
-.header-container {
-    background-color: #6a4c93; /* Lavender background */
-    text-align: center;
-    padding: 40px;  /* Space around the header content */
-    color: white; /* Text color in the header */
-}
-
-.header-container h1 {
-    margin-bottom: 20px;
-}
-
-.header-container .quote {
-    margin-bottom: 30px;
-    font-style: italic;
-    color: #d9d9d9;  /* Light grey color for the quote */
-}
-
-/* Menu Section */
-nav.submenu {
-    background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
-    padding: 20px;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px;
     margin: 20px auto;
     max-width: 800px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-nav.submenu ul {
+nav.categories ul {
     list-style: none;
     padding: 0;
 }
 
-nav.submenu ul li {
+nav.categories ul li {
     margin-bottom: 10px;
 }
 
-nav.submenu ul li a {
+nav.categories ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
@@ -357,295 +116,12 @@ nav.submenu ul li a {
     transition: background-color 0.3s ease;
 }
 
-nav.submenu ul li a:hover {
+nav.categories ul li a:hover {
     background-color: #ddd;
     color: #000;
 }
 
-/* Main Content Section */
-section {
-    background-color: rgba(255, 255, 255, 0.8); /* Light background */
-    color: #000;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px auto;
-    max-width: 800px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-section h1, section h2 {
-    color: #333;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-/* Footer Section */
-footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-.home-button {
-    text-decoration: none;
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.home-button:hover {
-    background-color: #555;
-}
-/* Main Navigation Menu */
-.categories {
-    background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px auto; /* Add space between the menu and other elements */
-    max-width: 800px; /* Limit width for better readability */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for a clean look */
-    position: relative; /* Ensure it stays in place */
-    z-index: 1; /* Makes sure it appears above other elements */
-}
-
-/* Links inside the menu */
-.categories ul {
-    list-style: none; /* Removes default list styling */
-    padding: 0;
-}
-
-.categories ul li {
-    margin-bottom: 10px; /* Add spacing between menu items */
-}
-
-.categories ul li a {
-    text-decoration: none;
-    color: #333; /* Dark link color */
-    font-weight: bold;
-    font-size: 1.2em; /* Slightly larger font for readability */
-    display: block; /* Make the link fill the list item */
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-/* Hover effect for menu links */
-.categories ul li a:hover {
-    background-color: #ddd; /* Light grey background on hover */
-    color: #000; /* Black text color on hover */
-}
-
-@media screen and (max-width: 768px) {
-    .mantra-generator {
-        position: static; /* Removes fixed positioning */
-        margin: 20px auto; /* Centers it */
-        max-width: 90%; /* Adjusts width for small screens */
-    }
-}
-/* Ensure the body element spans the full height of the viewport */
-body {
-    min-height: 100vh; /* Ensures the body spans the entire viewport height */
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-/* The main content should expand and fill the available space */
-.content {
-    flex-grow: 1; /* Makes sure the content grows and pushes footer */
-    padding: 20px;
-}
-
-/* Mantra Generator - Position fixed but ensure it's not interfering with the scroll */
-.mantra-generator {
-    position: fixed;
-    top: 20%; /* Adjust this value for proper vertical alignment */
-    right: 20px; /* Distance from the right edge */
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Keeps it on top of other elements */
-    max-width: 250px;
-    width: 100%; /* Ensures responsiveness */
-    overflow: hidden;
-}
-
-/* Ensures the body stretches to fill the screen */
-body {
-    min-height: 100vh; /* Ensures the body spans the entire viewport height */
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-/* Content section should take up available space and allow scroll */
-.content {
-    flex-grow: 1; /* Makes sure the content grows and pushes the footer down */
-    padding: 20px;
-    margin-right: 300px; /* Adds margin on the right to prevent overlap with the fixed mantra generator */
-}
-
-/* Fixed mantra generator positioning */
-.mantra-generator {
-    position: fixed;
-    top: 20%; /* Adjust for desired vertical alignment */
-    right: 20px; /* Distance from the right edge */
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    max-width: 250px; /* Ensure it doesn't take up too much space */
-    width: 100%; /* Make it responsive */
-}
-
-/* Section styles for main content */
-section {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #000;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px auto;
-    max-width: 800px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer section */
-footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    position: relative;
-    width: 100%;
-    margin-top: 40px; /* Adds space between content and footer */
-}
-
-/* Ensures footer stays at the bottom */
-footer {
-    margin-top: 40px; /* Adds space between the content and footer */
-}
-
-/* Add margin to section or content area to create space under the mantra generator */
-section {
-    margin-bottom: 80px; /* Ensures enough space below content */
-}
-/* Updated Header */
-.site-header {
-  position: relative; /* Makes the header the reference point for absolute positioning */
-  background: linear-gradient(to right, #1e1e2f, #2a2a44); /* Gradient to blend with the stars */
-  color: white;
-  padding: 20px;
-  text-align: center;
-  overflow: hidden; /* Ensures no overflow issues */
-}
-
-/* Updated Stars Container */
-.stars {
-  position: absolute;
-  top: 0; /* Place stars at the top of the header */
-  left: 0; /* Align stars to the left corner */
-  width: 100%; /* Let stars span the width of the header */
-  height: 100%; /* Let stars span the height of the header */
-  pointer-events: none; /* Makes sure the stars don't interfere with clicks */
-  z-index: 1; /* Ensures stars are visible, but behind text */
-}
-
-/* Individual star */
-.star {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background: radial-gradient(circle, white, rgba(255, 255, 255, 0.2));
-  border-radius: 50%;
-  animation: sparkle 2s infinite ease-in-out;
-  opacity: 0;
-}
-
-/* Sparkle animation */
-@keyframes sparkle {
-  0%, 100% {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
-/* Header Styling */
-.header-container {
-    text-align: center;
-    padding: 20px;
-}
-
-header h1 {
-    font-size: 36px;
-    color: #333;
-}
-
-header .quote {
-    font-size: 20px;
-    color: #666;
-}
-
-/* Create Stars Effect */
-.stars {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-}
-
-.star {
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    background-color: white;
-    border-radius: 50%;
-    animation: twinkle 2s infinite ease-in-out;
-}
-
-@keyframes twinkle {
-    0% {
-        opacity: 0.7;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0.7;
-    }
-}
-
-/* Mantra Generator Styling */
+/* Mantra Generator */
 .mantra-generator {
     position: fixed;
     top: 20%;
@@ -666,45 +142,54 @@ header .quote {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    margin-bottom: 10px;
-    text-align: center;
 }
 
 .mantra-generator button:hover {
     background-color: #45a049;
 }
 
-.mantra-generator p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-}
-
-/* Navigation Links */
-nav ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-nav ul li {
-    margin: 10px 0;
-}
-
-nav a {
+/* Stars Effect in Header */
+.site-header {
+    position: relative;
+    background: linear-gradient(to right, #1e1e2f, #2a2a44); /* Gradient */
     color: white;
-    text-decoration: none;
-    background-color: purple;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 20px;
     text-align: center;
+    overflow: hidden;
 }
 
-nav a:hover {
-    background-color: #5e2871;
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: radial-gradient(circle, white, rgba(255, 255, 255, 0.2));
+    border-radius: 50%;
+    animation: sparkle 2s infinite ease-in-out;
+    opacity: 0;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Fixed Footer to ensure it's always at the bottom */
+footer {
+    margin-top: 40px;
 }
