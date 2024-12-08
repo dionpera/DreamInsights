@@ -66,7 +66,7 @@
             text-decoration: none;
             padding: 10px 15px;
             background-color: #800080; /* Purple */
-            color: white;
+            color: white; /* Link text color */
             border-radius: 5px;
         }
 
@@ -137,6 +137,7 @@
             z-index: 1000;
             max-width: 250px;
             width: 100%;
+            text-align: center; /* Centers the content inside the mantra generator */
         }
 
         .mantra-generator p {
@@ -265,9 +266,9 @@
         });
 
         // Start music after interaction if autoplay is blocked
-        document.body.addEventListener("click", function() {
+        document.body.addEventListener('click', function() {
             document.getElementById("backgroundMusic").play();
-        });
+        }, { once: true });
     </script>
 </body>
 </html>
