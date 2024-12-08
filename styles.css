@@ -585,3 +585,26 @@ section {
     opacity: 1;
   }
 }
+.music-controls {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.music-controls button {
+  background: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.music-controls button:hover {
+  background: #45a049;
+}
