@@ -275,7 +275,7 @@
         createStars();
     </script>
 
-   <!-- Music Controls -->
+<!-- HTML Part -->
 <audio id="backgroundMusic" loop>
     <source src="meditative.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
@@ -288,38 +288,43 @@
 </div>
 
 <script>
-    // Play button functionality
-    document.getElementById("playButton").addEventListener("click", function() {
-        const audio = document.getElementById("backgroundMusic");
-        audio.play();
-        document.getElementById("playButton").style.display = "none"; // Hide play button once it's playing
-        document.getElementById("pauseButton").style.display = "block"; // Show pause button
+    // Create the audio element dynamically using JavaScript
+    const audio = new Audio('meditative.mp3');
+    audio.loop = true;  // Set the audio to loop
+
+    // Get the buttons and volume control
+    const playButton = document.getElementById("playButton");
+    const pauseButton = document.getElementById("pauseButton");
+    const volumeControl = document.getElementById("volumeControl");
+
+    // Hide the pause button initially
+    pauseButton.style.display = "none";
+
+    // Play Button Functionality
+    playButton.addEventListener("click", function() {
+        audio.play();  // Play the audio
+        playButton.style.display = "none";  // Hide play button
+        pauseButton.style.display = "block";  // Show pause button
     });
 
-    // Pause button functionality
-    document.getElementById("pauseButton").addEventListener("click", function() {
-        const audio = document.getElementById("backgroundMusic");
-        audio.pause();
-        document.getElementById("playButton").style.display = "block"; // Show play button
-        document.getElementById("pauseButton").style.display = "none"; // Hide pause button
+    // Pause Button Functionality
+    pauseButton.addEventListener("click", function() {
+        audio.pause();  // Pause the audio
+        playButton.style.display = "block";  // Show play button
+        pauseButton.style.display = "none";  // Hide pause button
     });
 
-    // Volume control functionality
-    document.getElementById("volumeControl").addEventListener("input", function(event) {
-        const audio = document.getElementById("backgroundMusic");
-        audio.volume = event.target.value;
+    // Volume Control Functionality
+    volumeControl.addEventListener("input", function(event) {
+        audio.volume = event.target.value;  // Adjust the audio volume
     });
 
     // Start audio playback after the user interacts with the page (click anywhere)
     document.body.addEventListener('click', function() {
-        const audio = document.getElementById('backgroundMusic');
         if (audio.paused) {
-            audio.play();
-            document.getElementById("playButton").style.display = "none"; // Hide play button
-            document.getElementById("pauseButton").style.display = "block"; // Show pause button
+            audio.play();  // Start the music if it's not playing
+            playButton.style.display = "none";  // Hide play button
+            pauseButton.style.display = "block";  // Show pause button
         }
-    }, { once: true }); // Ensures this runs only once after the first interaction
+    }, { once: true });  // Ensures this only runs once after the first interaction
 </script>
-
-</body>
-</html>
