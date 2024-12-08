@@ -33,14 +33,14 @@
         .home-button {
             display: inline-block;
             padding: 10px 15px;
-            background-color: #4CAF50;
+            background-color: #800080; /* Purple color */
             color: white;
             text-decoration: none;
             border-radius: 5px;
         }
 
         .home-button:hover {
-            background-color: #45a049;
+            background-color: #660066; /* Darker purple on hover */
         }
 
         .introduction {
@@ -48,27 +48,30 @@
             padding: 20px;
         }
 
+        /* Vertical Menu Styling */
         .categories ul {
             list-style-type: none;
             padding: 0;
             text-align: center;
+            display: flex;
+            flex-direction: column; /* This makes the links display vertically */
+            align-items: center; /* Center align the links */
         }
 
         .categories ul li {
-            display: inline-block;
-            margin: 10px;
+            margin: 10px 0; /* Adds spacing between the vertical links */
         }
 
         .categories ul li a {
             text-decoration: none;
             padding: 10px 15px;
-            background-color: #007BFF; /* Updated link color */
+            background-color: #800080; /* Purple */
             color: white;
             border-radius: 5px;
         }
 
         .categories ul li a:hover {
-            background-color: #0056b3;
+            background-color: #660066; /* Darker purple on hover */
         }
 
         footer {
@@ -107,7 +110,22 @@
             }
         }
 
-        /* Mantra Generator Styling */
+        /* Purple Buttons (Mantra & Music Controls) */
+        button {
+            background-color: #800080; /* Purple */
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #660066; /* Darker purple on hover */
+        }
+
         .mantra-generator {
             position: fixed;
             top: 20%;
@@ -119,22 +137,6 @@
             z-index: 1000;
             max-width: 250px;
             width: 100%;
-        }
-
-        .mantra-generator button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-
-        .mantra-generator button:hover {
-            background-color: #45a049;
         }
 
         .mantra-generator p {
@@ -154,66 +156,49 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-
-        .music-controls button {
-            margin: 5px;
-        }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="header-container">
             <h1>Dream Insight</h1>
             <p class="quote">"The dream is the small hidden door in the unconscious that leads to the whole liberation of the self." - Carl Jung</p>
+            <!-- Home Button -->
             <a href="index.html" class="home-button">Home</a>
         </div>
-        <div class="stars"></div>
     </header>
 
-    <!-- Introduction -->
     <section class="introduction">
         <h2>Welcome to Dream Insight</h2>
         <p>At Dream Insight, we help you understand the hidden meanings behind your dreams, whether they are about animals, relationships, places, or more. Explore your dreams and find their spiritual significance.</p>
     </section>
 
-    <!-- Navigation -->
+    <!-- Transparent Menu Box with Vertical Links -->
     <nav class="categories">
         <ul>
             <li><a href="animals.html">Animals</a></li>
             <li><a href="relationships.html">Relationships</a></li>
             <li><a href="properties.html">Properties</a></li>
             <li><a href="places.html">Places</a></li>
-            <li><a href="stages-of-self.html">Stages of Self</a></li>
+            <li><a href="stages-of-self.html">Stages of Self</a></li> <!-- Added the Stages of Self link -->
         </ul>
     </nav>
 
-    <!-- Mantra Generator -->
+    <footer>
+        <p>© 2024 Dream Insight. All rights reserved.</p>
+    </footer>
+
+    <!-- Mantra Generator Section -->
     <div class="mantra-generator">
         <h3>Mantra Generator</h3>
         <button id="generateMantraButton">Generate Mantra</button>
         <p id="mantraDisplay">Your mantra will appear here...</p>
     </div>
 
-    <!-- Background Music -->
-    <audio id="backgroundMusic" loop>
-        <source src="meditative.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <div class="music-controls">
-        <button id="playButton" aria-label="Play background music">Play</button>
-        <button id="pauseButton" aria-label="Pause background music">Pause</button>
-        <input id="volumeControl" type="range" min="0" max="1" step="0.1" value="0.5" aria-label="Volume control">
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 Dream Insight. All rights reserved.</p>
-    </footer>
-
+    <!-- JavaScript for the Mantra Generator -->
     <script>
-        // Mantra Generator
         document.getElementById("generateMantraButton").addEventListener("click", function() {
+            // Array of mantras
             const mantras = [
                 "I am the master of my fate.",
                 "Peace begins with a smile.",
@@ -226,31 +211,63 @@
                 "I attract positivity and abundance.",
                 "I am grateful for this moment."
             ];
+
+            // Generate a random mantra
             const randomMantra = mantras[Math.floor(Math.random() * mantras.length)];
+
+            // Display the generated mantra
             document.getElementById("mantraDisplay").textContent = randomMantra;
         });
+    </script>
 
-        // Music Controls
-        const music = document.getElementById("backgroundMusic");
-        document.getElementById("playButton").addEventListener("click", () => music.play());
-        document.getElementById("pauseButton").addEventListener("click", () => music.pause());
-        document.getElementById("volumeControl").addEventListener("input", event => {
-            music.volume = event.target.value;
-        });
-
-        // Stars Animation
+    <!-- Function to create stars -->
+    <script>
         function createStars() {
             const starContainer = document.querySelector('.stars');
-            for (let i = 0; i < 50; i++) {
+            
+            for (let i = 0; i < 10; i++) { // Number of stars
                 const star = document.createElement('div');
                 star.className = 'star';
-                star.style.top = `${Math.random() * 100}%`;
-                star.style.left = `${Math.random() * 100}%`;
-                star.style.animationDelay = `${Math.random() * 2}s`;
+                star.style.top = `${Math.random() * 50}px`; // Random position within the container
+                star.style.left = `${Math.random() * 50}px`;
+                star.style.animationDelay = `${Math.random() * 2}s`; // Staggered animations
                 starContainer.appendChild(star);
             }
         }
+
+        // Initialize stars
         createStars();
+    </script>
+
+    <!-- Music Controls -->
+    <audio id="backgroundMusic" loop>
+        <source src="meditative.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="music-controls">
+        <button id="playButton" aria-label="Play background music">Play</button>
+        <button id="pauseButton" aria-label="Pause background music">Pause</button>
+        <input id="volumeControl" type="range" min="0" max="1" step="0.1" value="0.5" aria-label="Volume control">
+    </div>
+
+    <script>
+        document.getElementById("playButton").addEventListener("click", function() {
+            document.getElementById("backgroundMusic").play();
+        });
+
+        document.getElementById("pauseButton").addEventListener("click", function() {
+            document.getElementById("backgroundMusic").pause();
+        });
+
+        document.getElementById("volumeControl").addEventListener("input", function(event) {
+            document.getElementById("backgroundMusic").volume = event.target.value;
+        });
+
+        // Start music after interaction if autoplay is blocked
+        document.body.addEventListener("click", function() {
+            document.getElementById("backgroundMusic").play();
+        });
     </script>
 </body>
 </html>
