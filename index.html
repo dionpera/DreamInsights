@@ -4,36 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dream Insight</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+
+        /* Header Stars */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            width: 5px;
+            height: 5px;
+            animation: twinkle 1.5s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% {
+                opacity: 0.8;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0.2;
+                transform: scale(1.5);
+            }
+        }
+
+        /* Navigation Links */
+        nav {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            position: fixed;
+            top: 20%;
+            right: 0;
+            z-index: 2;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        nav ul li a:hover {
+            background-color: #4CAF50;
+        }
+
+        /* Mantra Generator Styling */
+        .mantra-generator {
+            position: fixed;
+            top: 20%;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            max-width: 250px;
+            width: 100%;
+        }
+
+        .mantra-generator button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .mantra-generator button:hover {
+            background-color: #45a049;
+        }
+
+        .mantra-generator p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+    </style>
 </head>
 <body>
-
     <header>
-        <div class="header-container">
-            <h1>Dream Insight</h1>
-            <p class="quote">"The dream is the small hidden door in the unconscious that leads to the whole liberation of the self." - Carl Jung</p>
-            <!-- Home Button -->
-            <a href="index.html" class="home-button">Home</a>
-        </div>
+        <h1>Dream Insight</h1>
+        <p class="quote">"The dream is the small hidden door in the unconscious that leads to the whole liberation of the self." - Carl Jung</p>
+        <a href="index.html" class="home-button">Home</a>
     </header>
+
+    <div class="stars"></div> <!-- Stars are in the header area -->
 
     <section class="introduction">
         <h2>Welcome to Dream Insight</h2>
         <p>At Dream Insight, we help you understand the hidden meanings behind your dreams, whether they are about animals, relationships, places, or more. Explore your dreams and find their spiritual significance.</p>
     </section>
 
-    <!-- Transparent Menu Box -->
-    <nav class="categories">
+    <!-- Transparent Menu Box with Vertical Links -->
+    <nav>
         <ul>
             <li><a href="animals.html">Animals</a></li>
             <li><a href="relationships.html">Relationships</a></li>
             <li><a href="properties.html">Properties</a></li>
             <li><a href="places.html">Places</a></li>
-            <li><a href="stages-of-self.html">Stages of Self</a></li> <!-- Added the Stages of Self link -->
+            <li><a href="stages-of-self.html">Stages of Self</a></li>
         </ul>
     </nav>
 
-    <!-- Mantra Generator and Audio Controls -->
+    <!-- Mantra Generator -->
     <div class="mantra-generator">
         <h3>Mantra Generator</h3>
         <button id="generateMantraButton">Generate Mantra</button>
@@ -45,13 +182,27 @@
     </footer>
 
     <script>
-    
+        // Function to create stars
+        function createStars() {
+            const starContainer = document.querySelector('.stars');
+            
+            for (let i = 0; i < 100; i++) { // Number of stars
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.top = `${Math.random() * 100}%`; // Random position within the container
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.animationDelay = `${Math.random() * 2}s`; // Staggered animations
+                starContainer.appendChild(star);
+            }
         }
+
+        // Initialize stars
+        createStars();
 
         // Mantra Generator Code
         document.getElementById("generateMantraButton").addEventListener("click", function () {
             const mantras = [
-               "I am the master of my fate.",
+                "I am the master of my fate.",
                 "Peace begins with a smile.",
                 "The only way out is through.",
                 "You are enough just as you are.",
@@ -95,12 +246,12 @@
                 "I have the courage to embrace my uniqueness and shine."
             ];
 
+            // Generate a random mantra
             const randomMantra = mantras[Math.floor(Math.random() * mantras.length)];
+
+            // Display the generated mantra
             document.getElementById("mantraDisplay").textContent = randomMantra;
         });
     </script>
-
 </body>
 </html>
-
-
