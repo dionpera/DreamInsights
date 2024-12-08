@@ -189,6 +189,7 @@
 
 <audio id="backgroundMusic" loop>
   <source src="backgroundMusic.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
 </audio>
 
 <div class="music-controls">
@@ -214,4 +215,12 @@
   document.body.addEventListener('click', function() {
     document.getElementById("backgroundMusic").play();
   }, { once: true });
+</script>
+<script>
+  document.body.addEventListener('click', function() {
+    const audio = document.getElementById('backgroundMusic');
+    if (audio.paused) {
+      audio.play();
+    }
+  }, { once: true }); // Ensures this runs only on the first interaction
 </script>
