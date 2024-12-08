@@ -159,6 +159,7 @@ document.querySelectorAll('nav ul li a').forEach(link => {
   createStars();
 </script>
 </body>
+
 });
 document.getElementById("playButton").addEventListener("click", function() {
   document.getElementById("backgroundMusic").play();
