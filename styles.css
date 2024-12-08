@@ -607,3 +607,7 @@ section {
 
 .music-controls button:hover {
   background: #45a049;
+.categories ul li a {
+    color: white; /* Links in white */
+    background-color: transparent; /* No purple background */
+}
