@@ -182,3 +182,4 @@ document.getElementById("generateMantraButton").addEventListener("click", functi
   // Initialize stars
   createStars();
 </script>
+</body>
