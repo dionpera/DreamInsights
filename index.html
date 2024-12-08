@@ -5,218 +5,255 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dream Insight</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            text-align: center;
+            background-color: #282c34;
+            color: white;
+            padding: 20px 10px;
+        }
+
+        .header-container {
+            margin-bottom: 10px;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .home-button:hover {
+            background-color: #45a049;
+        }
+
+        .introduction {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .categories ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .categories ul li {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .categories ul li a {
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .categories ul li a:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #282c34;
+            color: white;
+        }
+
+        /* Stars Animation */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .star {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 2s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* Mantra Generator Styling */
+        .mantra-generator {
+            position: fixed;
+            top: 20%;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            max-width: 250px;
+            width: 100%;
+        }
+
+        .mantra-generator button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .mantra-generator button:hover {
+            background-color: #45a049;
+        }
+
+        .mantra-generator p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Music Controls */
+        .music-controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .music-controls button {
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
-   <header>
+    <!-- Header -->
+    <header>
         <div class="header-container">
             <h1>Dream Insight</h1>
             <p class="quote">"The dream is the small hidden door in the unconscious that leads to the whole liberation of the self." - Carl Jung</p>
-            <!-- Home Button -->
             <a href="index.html" class="home-button">Home</a>
         </div>
+        <div class="stars"></div>
     </header>
-<header class="site-header">
-  <div class="stars"></div>
-  <h1>Dream Insight</h1>
-</header>
-  <header class="site-header">
-    <div class="stars"></div> <!-- Stars are now part of the header -->
-    <h1>Dream Insight</h1>
-  </header>
 
+    <!-- Introduction -->
     <section class="introduction">
         <h2>Welcome to Dream Insight</h2>
         <p>At Dream Insight, we help you understand the hidden meanings behind your dreams, whether they are about animals, relationships, places, or more. Explore your dreams and find their spiritual significance.</p>
     </section>
 
-    <!-- Transparent Menu Box -->
+    <!-- Navigation -->
     <nav class="categories">
-    <ul>
-        <li><a href="animals.html">Animals</a></li>
-        <li><a href="relationships.html">Relationships</a></li>
-        <li><a href="properties.html">Properties</a></li>
-        <li><a href="places.html">Places</a></li>
-        <li><a href="stages-of-self.html">Stages of Self</a></li> <!-- Added the Stages of Self link -->
-    </ul>
-</nav>
- 
-</body>
+        <ul>
+            <li><a href="animals.html">Animals</a></li>
+            <li><a href="relationships.html">Relationships</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="places.html">Places</a></li>
+            <li><a href="stages-of-self.html">Stages of Self</a></li>
+        </ul>
+    </nav>
 
- <footer>
+    <!-- Mantra Generator -->
+    <div class="mantra-generator">
+        <h3>Mantra Generator</h3>
+        <button id="generateMantraButton">Generate Mantra</button>
+        <p id="mantraDisplay">Your mantra will appear here...</p>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="meditative.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="music-controls">
+        <button id="playButton" aria-label="Play background music">Play</button>
+        <button id="pauseButton" aria-label="Pause background music">Pause</button>
+        <input id="volumeControl" type="range" min="0" max="1" step="0.1" value="0.5" aria-label="Volume control">
+    </div>
+
+    <!-- Footer -->
+    <footer>
         <p>© 2024 Dream Insight. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Mantra Generator
+        document.getElementById("generateMantraButton").addEventListener("click", function() {
+            const mantras = [
+                "I am the master of my fate.",
+                "Peace begins with a smile.",
+                "The only way out is through.",
+                "You are enough just as you are.",
+                "Let it go, and let yourself grow.",
+                "Breathe in calm, breathe out stress.",
+                "Every day is a new beginning.",
+                "This too shall pass.",
+                "I attract positivity and abundance.",
+                "I am grateful for this moment."
+            ];
+            const randomMantra = mantras[Math.floor(Math.random() * mantras.length)];
+            document.getElementById("mantraDisplay").textContent = randomMantra;
+        });
+
+        // Music Controls
+        const music = document.getElementById("backgroundMusic");
+        document.getElementById("playButton").addEventListener("click", () => music.play());
+        document.getElementById("pauseButton").addEventListener("click", () => music.pause());
+        document.getElementById("volumeControl").addEventListener("input", event => {
+            music.volume = event.target.value;
+        });
+
+        // Stars Animation
+        function createStars() {
+            const starContainer = document.querySelector('.stars');
+            for (let i = 0; i < 50; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.animationDelay = `${Math.random() * 2}s`;
+                starContainer.appendChild(star);
+            }
+        }
+        createStars();
+    </script>
 </body>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mantra Generator</title>
-  <style>
-    /* Mantra Generator Styling */
-    .mantra-generator {
-        position: fixed;
-        top: 20%;
-        right: 20px;
-        background-color: rgba(255, 255, 255, 0.9);
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        z-index: 1000;
-        max-width: 250px;
-        width: 100%;
-    }
-
-    .mantra-generator button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .mantra-generator button:hover {
-        background-color: #45a049;
-    }
-
-    .mantra-generator p {
-        font-size: 18px;
-        font-weight: bold;
-        color: #333;
-        text-align: center;
-    }
-  </style>
-</head>
-<body>
-  <!-- HTML content for the Mantra Generator -->
-  <div class="mantra-generator">
-    <h3>Mantra Generator</h3>
-    <button id="generateMantraButton">Generate Mantra</button>
-    <p id="mantraDisplay">Your mantra will appear here...</p>
-  </div>
-
-  <!-- JavaScript for the Mantra Generator -->
- <script>
-  document.getElementById("generateMantraButton").addEventListener("click", function() {
-    // Array of mantras
-    const mantras = [
-      "I am the master of my fate.",
-      "Peace begins with a smile.",
-      "The only way out is through.",
-      "You are enough just as you are.",
-      "Let it go, and let yourself grow.",
-      "Breathe in calm, breathe out stress.",
-      "Every day is a new beginning.",
-      "This too shall pass.",
-      "I attract positivity and abundance.",
-      "I am grateful for this moment.",
-      "I embrace the flow of life and trust in my journey.",
-      "My dreams guide me toward my true purpose.",
-      "I release what no longer serves me and welcome peace.",
-      "I am grounded, strong, and deeply connected to myself.",
-      "My emotions flow freely and guide me to clarity.",
-      "I see the beauty in every stage of life.",
-      "I am open to love, growth, and endless possibilities.",
-      "I am becoming the best version of myself every day.",
-      "Happiness is a choice, and today I choose joy.",
-      "I am stronger than my challenges and wiser because of them.",
-      "Every breath I take fills me with calm and confidence.",
-      "I release what I cannot control and embrace peace.",
-      "The universe is conspiring in my favor.",
-      "My mind is clear, my body is healthy, and my soul is at peace.",
-      "Success flows effortlessly to me.",
-      "I am grateful for the abundance that surrounds me.",
-      "I trust the process of life and its infinite possibilities.",
-      "I radiate positivity, kindness, and love.",
-      "Challenges are opportunities to grow and learn.",
-      "I am proud of how far I have come and excited for what’s ahead.",
-      "My potential is limitless, and I am fearless in pursuit of my goals.",
-      "I am grounded, focused, and strong.",
-      "I welcome new beginnings with open arms.",
-      "The power to create my dreams is within me.",
-      "I am a magnet for good energy and positivity.",
-      "I forgive myself and others, freeing myself from the past.",
-      "I deserve love, success, and happiness in abundance.",
-      "Every step I take is filled with purpose and clarity.",
-      "I am exactly where I need to be in this moment.",
-      "My heart is open, and love flows freely through me.",
-      "I am resilient, resourceful, and determined.",
-      "I have the courage to embrace my uniqueness and shine."
-    ];
-
-    // Generate a random mantra
-    const randomMantra = mantras[Math.floor(Math.random() * mantras.length)];
-
-    // Display the generated mantra
-    document.getElementById("mantraDisplay").textContent = randomMantra;
-  });
-</script>
-
-  </script>
-</body>
-    
 </html>
-<script>
-  // Function to create stars
-  function createStars() {
-    const starContainer = document.querySelector('.stars');
-    
-    for (let i = 0; i < 10; i++) { // Number of stars
-      const star = document.createElement('div');
-      star.className = 'star';
-      star.style.top = `${Math.random() * 50}px`; // Random position within the container
-      star.style.left = `${Math.random() * 50}px`;
-      star.style.animationDelay = `${Math.random() * 2}s`; // Staggered animations
-      starContainer.appendChild(star);
-    }
-  }
-
-  // Initialize stars
-  createStars();
-    
-</script>
-
-<audio id="backgroundMusic" loop>
-  <source src="meditative.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
-
-<div class="music-controls">
-  <button id="playButton" aria-label="Play background music">Play</button>
-  <button id="pauseButton" aria-label="Pause background music">Pause</button>
-  <input id="volumeControl" type="range" min="0" max="1" step="0.1" value="0.5" aria-label="Volume control">
-</div>
-
-<script>
-    
-  document.getElementById("playButton").addEventListener("click", function() {
-    document.getElementById("backgroundMusic").play();
-  });
-
-  document.getElementById("pauseButton").addEventListener("click", function() {
-    document.getElementById("backgroundMusic").pause();
-  });
-
-  document.getElementById("volumeControl").addEventListener("input", function(event) {
-    document.getElementById("backgroundMusic").volume = event.target.value;
-  });
-
-  // Start music after interaction if autoplay is blocked
-  document.body.addEventListener('click', function() {
-    document.getElementById("backgroundMusic").play();
-  }, { once: true });
-</script>
-
-<script>
-  document.body.addEventListener('click', function() {
-    const audio = document.getElementById('backgroundMusic');
-    if (audio.paused) {
-      audio.play();
-    }
-  }, { once: true }); // Ensures this runs only on the first interaction
-</script>
