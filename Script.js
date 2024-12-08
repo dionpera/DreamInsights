@@ -215,11 +215,13 @@ document.getElementById("generateMantraButton").addEventListener("click", functi
   createStars();
 </script>
 </body>
-
+});
 document.getElementById("playButton").addEventListener("click", function() {
   document.getElementById("backgroundMusic").play();
 });
 
 document.getElementById("pauseButton").addEventListener("click", function() {
   document.getElementById("backgroundMusic").pause();
+});
+document.getElementById("backgroundMusic").volume = 0.5; // 50% volume
 });
