@@ -197,6 +197,8 @@ document.getElementById("generateMantraButton").addEventListener("click", functi
   document.getElementById("mantraDisplay").textContent = randomMantra;
 });
 <script>
+    
+<script>
   // Function to create stars
   function createStars() {
     const starContainer = document.querySelector('.stars');
