@@ -542,25 +542,25 @@ footer {
 section {
     margin-bottom: 80px; /* Ensures enough space below content */
 }
-/* Style for the header */
+/* Updated Header */
 .site-header {
-  position: relative;
-  background: #1e1e2f; /* Adjust to match your site's theme */
+  position: relative; /* Makes the header the reference point for absolute positioning */
+  background: linear-gradient(to right, #1e1e2f, #2a2a44); /* Gradient to blend with the stars */
   color: white;
   padding: 20px;
   text-align: center;
-  overflow: hidden;
+  overflow: hidden; /* Ensures no overflow issues */
 }
 
-/* Stars container */
+/* Updated Stars Container */
 .stars {
   position: absolute;
-  top: 10px; /* Adjust to position near the left corner */
-  left: 10px;
-  width: 50px; /* Adjust for the desired size of the star effect */
-  height: 50px;
-  pointer-events: none;
-  overflow: visible;
+  top: 0; /* Place stars at the top of the header */
+  left: 0; /* Align stars to the left corner */
+  width: 100%; /* Let stars span the width of the header */
+  height: 100%; /* Let stars span the height of the header */
+  pointer-events: none; /* Makes sure the stars don't interfere with clicks */
+  z-index: 1; /* Ensures stars are visible, but behind text */
 }
 
 /* Individual star */
