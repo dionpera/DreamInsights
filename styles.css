@@ -151,7 +151,7 @@ section a {
     display: inline-block; /* Makes the link behave like a block-level element */
     padding: 20px;         /* Add padding around the link */
     background-color: #9370DB; /* Add a background color to the link box */
-    color: white;          /* Make the text color white */
+    color: black;          /* Make the text color white */
     text-decoration: none; /* Remove the underline */
     border-radius: 8px;    /* Round the corners */
 }
