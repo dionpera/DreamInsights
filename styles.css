@@ -26,16 +26,11 @@ header {
     text-align: center;
     height: 100px; /* Temporary height for visibility */
 }
-section {
+
 /* Main section */
 /* Main Content Section */
-.introduction {
-     color: black;
-    text-align: center;
-    padding: 30px;
-    margin-bottom: 20px; /* Add some space below the intro section */
-}
-.introduction {
+section {
+    .introduction {
     display: flex; /* Enable flexbox */
     justify-content: center; /* Horizontally centers the links */
     align-items: center; /* Vertically centers the links */
@@ -49,6 +44,13 @@ section {
     border-radius: 10px;
     width: 60%; /* Adjust the width of the introdution box as needed */
     z-index: 1000; /* Ensure the box stays above other content */
+        
+}    
+.introduction {
+     color: black;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 20px; /* Add some space below the intro section */
 }
 
 /* Link Box Styling */
