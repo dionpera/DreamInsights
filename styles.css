@@ -31,9 +31,6 @@ header {
 /* Main Content Section */
 section {
     .introduction {
-    color: black;
-    text-align: center;
-    padding: 30px;
     margin-bottom: 20px; /* Add some space below the intro section */
     display: flex; /* Enable flexbox */
     justify-content: center; /* Horizontally centers the links */
@@ -49,7 +46,12 @@ section {
     width: 60%; /* Adjust the width of the introdution box as needed */
     z-index: 1000; /* Ensure the box stays above other content */
 }
-
+section {
+    .introduction {    
+    color: black;
+    text-align: center;
+    padding: 30px;
+}     
 /* Link Box Styling */
 /* Link Box Container */
 .link-box {
