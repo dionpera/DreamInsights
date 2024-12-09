@@ -35,6 +35,21 @@ header {
     padding: 30px;
     margin-bottom: 20px; /* Add some space below the intro section */
 }
+.introduction-box {
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Horizontally centers the links */
+    align-items: center; /* Vertically centers the links */
+    flex-direction: column; /* Aligns items in a column */
+    position: reletive; /* Reletive positioning to keep it on the screen */
+    top: 100%; /* Moves the box vertically to the center of the page */
+    left: 100%; /* Moves the box horizontally to the center */
+    transform: translate(-50%, -50%); /* Adjusts for perfect centering */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Semi-transparent background */
+    border-radius: 10px;
+    width: 60%; /* Adjust the width of the introdution box as needed */
+    z-index: 1000; /* Ensure the box stays above other content */
+}
 
 /* Link Box Styling */
 /* Link Box Container */
@@ -43,7 +58,7 @@ header {
     justify-content: center; /* Horizontally centers the links */
     align-items: center; /* Vertically centers the links */
     flex-direction: column; /* Aligns items in a column */
-    position: reletive; /* Fixed positioning to keep it on the screen */
+    position: reletive; /* Reletive positioning to keep it on the screen */
     top: 100%; /* Moves the box vertically to the center of the page */
     left: 100%; /* Moves the box horizontally to the center */
     transform: translate(-50%, -50%); /* Adjusts for perfect centering */
