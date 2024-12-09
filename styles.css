@@ -45,9 +45,7 @@ section {
     border-radius: 10px;
     width: 60%; /* Adjust the width of the introdution box as needed */
     z-index: 1000; /* Ensure the box stays above other content */
-}
-section {
-    .introduction {    
+}    
     color: black;
     text-align: center;
     padding: 30px;
