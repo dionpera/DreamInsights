@@ -11,7 +11,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     background-image: url(images/background.jpg); /* Path to your background image */
     background-size: cover; /* Ensures the image covers the entire background */
     background-position: center; /* Centers the image */
@@ -21,7 +21,7 @@ body {
 /* Header styling */
 header {
     background-color: #9370DB;
-    color: purple;
+    color: white;
     padding: 20px 0;
     text-align: center;
 }
