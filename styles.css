@@ -35,18 +35,29 @@ header {
 }
 
 /* Link Box Styling */
+/* Link Box Container */
 .link-box {
-    width: 100%; /* Full width */
-    text-align: center; /* Centers the links horizontally */
-    margin-top: 30px; /* Space above the link box */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Horizontally centers the links */
+    align-items: center; /* Vertically centers the links */
+    flex-direction: column; /* Aligns items in a column */
+    position: fixed; /* Fixed positioning to keep it on the screen */
+    top: 50%; /* Moves the box vertically to the center of the page */
+    left: 50%; /* Moves the box horizontally to the center */
+    transform: translate(-50%, -50%); /* Adjusts for perfect centering */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Semi-transparent background */
+    border-radius: 10px;
+    width: 60%; /* Adjust the width of the link box as needed */
+    z-index: 1000; /* Ensure the box stays above other content */
 }
 
 /* Link Styling */
 .link-box a {
-    display: inline-block; /* Makes each link block level */
+    display: inline-block; /* Makes each link block-level */
     color: #333;
     background-color: #ffffff;
-    padding: 10px 20px; /* Add padding to each link */
+    padding: 10px 20px;
     margin: 5px; /* Space between the links */
     text-decoration: none;
     border-radius: 8px;
