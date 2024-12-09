@@ -27,10 +27,48 @@ header {
 }
 
 /* Main section */
-main {
-    padding: 20px;
+/* Main Content Section */
+.introduction {
     text-align: center;
+    padding: 30px;
+    margin-bottom: 20px; /* Add some space below the intro section */
 }
+
+/* Link Box Styling */
+.link-box {
+    width: 100%; /* Full width */
+    text-align: center; /* Centers the links horizontally */
+    margin-top: 30px; /* Space above the link box */
+}
+
+/* Link Styling */
+.link-box a {
+    display: inline-block; /* Makes each link block level */
+    color: #333;
+    background-color: #ffffff;
+    padding: 10px 20px; /* Add padding to each link */
+    margin: 5px; /* Space between the links */
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.link-box a:hover {
+    background-color: #4CAF50; /* Highlight links on hover */
+    color: white;
+}
+
+/* Optional: Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .link-box {
+        margin-top: 15px; /* Smaller margin for mobile */
+    }
+
+    .link-box a {
+        font-size: 14px; /* Smaller font size for links on smaller screens */
+    }
+}
+
 
 /* Mantra on the right side */
 .mantra {
