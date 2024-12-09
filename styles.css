@@ -35,7 +35,7 @@ header {
     padding: 30px;
     margin-bottom: 20px; /* Add some space below the intro section */
 }
-.introduction-box {
+.introduction {
     display: flex; /* Enable flexbox */
     justify-content: center; /* Horizontally centers the links */
     align-items: center; /* Vertically centers the links */
