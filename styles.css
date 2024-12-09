@@ -30,6 +30,7 @@ header {
 /* Main section */
 /* Main Content Section */
 .introduction {
+     color: black;
     text-align: center;
     padding: 30px;
     margin-bottom: 20px; /* Add some space below the intro section */
