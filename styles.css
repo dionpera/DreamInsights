@@ -78,6 +78,7 @@ section {
     text-decoration: none;
     border-radius: 8px;
     font-size: 16px;
+    position: centre;
 }
 
 .link-box a:hover {
