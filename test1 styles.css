@@ -1,8 +1,8 @@
 /* Basic reset to remove default browser margins and padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 20%;
+    padding: 20%;
+    box-sizing: border-box; 20%;
 }
 
 /* test1 styles.css*/
