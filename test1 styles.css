@@ -1,7 +1,7 @@
 /* Basic reset to remove default browser margins and padding */
 * {
     margin: 10%;
-    padding: 10%;
+    padding: 0%;
     box-sizing: 20%; border-box: 10%;
 }
 
