@@ -99,7 +99,7 @@ section {
 
 /* Mantra on the right side */
 .mantra {
-    position: absolute;
+    position: reletive;
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
