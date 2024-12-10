@@ -46,6 +46,7 @@ section {
     width: 60%; /* Adjust the width of the introdution box as needed */
     z-index: 1000; /* Ensure the box stays above other content */
 }    
+    box-align:center
     color: black;
     text-align: center;
     padding: 30px;
