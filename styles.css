@@ -32,7 +32,6 @@ header {
 section {
     .introduction {
     margin-bottom: 20px; /* Add some space below the intro section */
-    display: flex; /* Enable flexbox */
     justify-content: center; /* Horizontally centers the links */
     align-items: center; /* Vertically centers the links */
     flex-direction: column; /* Aligns items in a column */
