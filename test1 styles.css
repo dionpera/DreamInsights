@@ -1,11 +1,11 @@
 /* Basic reset to remove default browser margins and padding */
 * {
-    margin-top: 10%;
-    marging-bottom: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-top: 5%;
+    marging-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
     padding: 0%;
-    box-sizing: 2%; border-box: 2%;
+    box-sizing: %; border-box: %;
     color: lavender blush2;
 }
 
