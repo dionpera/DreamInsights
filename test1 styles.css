@@ -1,5 +1,5 @@
 /* test1 styles.css*/
-      body {
+     body {
           background-colour: purple1;
       }
     h1 {
@@ -7,4 +7,8 @@
       font-family: Tahoma, sans-serif;
       position: center;
     }
-    
+   h2 {
+       colour: #EBDDE2;
+      font-family: Tahoma, sans-serif;
+      position: center;
+   }    
