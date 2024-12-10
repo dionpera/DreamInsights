@@ -46,7 +46,6 @@ section {
     width: 60%; /* Adjust the width of the introdution box as needed */
     z-index: 1000; /* Ensure the box stays above other content */
 }    
-    box-align:center
     color: black;
     text-align: center;
     padding: 30px;
@@ -56,6 +55,7 @@ section {
 .link-box {
     display: flex; /* Enable flexbox */
     justify-content: center; /* Horizontally centers the links */
+    box-align: center;
     align-items: center; /* Vertically centers the links */
     flex-direction: column; /* Aligns items in a column */
     position: reletive; /* Reletive positioning to keep it on the screen */
