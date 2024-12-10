@@ -1,8 +1,8 @@
 /* Basic reset to remove default browser margins and padding */
 * {
-    margin: 0%;
+    margin: 10%;
     padding: 10%;
-    box-sizing: 10%; border-box: 20%;
+    box-sizing: 20%; border-box: 20%;
     color: lavender blush2;
 }
 
@@ -27,3 +27,5 @@
         font-family: Tahoma, sans-serif;
         color: lavender blush2; /* text color */
    }
+/*Applies to all background */
+   .a  { colour: lavender blush1; }
