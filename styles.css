@@ -68,7 +68,7 @@ section {
     width: 60%; /* Adjust the width of the link box as needed */
     z-index: 1000; /* Ensure the box stays above other content */
 }
-
+}
 /* Link Styling */
 .link-box a {
     display: inline-block; /* Makes each link block-level */
