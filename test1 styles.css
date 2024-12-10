@@ -1,14 +1,20 @@
 /* test1 styles.css*/
-     body {
-          background-colour: purple1;
+     .body {
+          background-color: purple1;
       }
-    h1 {
-      colour: #EBDDE2;
+    .h1 {
+      color: #EBDDE2;
       font-family: Tahoma, sans-serif;
       position: center;
     }
-   h2 {
+   .h2 {
        colour: #EBDDE2;
       font-family: Tahoma, sans-serif;
       position: center;
-   }    
+   }  
+/*Applies to all <p> elements. */
+   .p {
+        font-size: 14px:
+        font-family: Tahoma, sans-serif;
+        color: #EBDDE2;
+   }
