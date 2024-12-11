@@ -10,7 +10,8 @@
 }
 
 /* test1 styles.css*/
-     .body {
+/*Applies to all background */
+     .background {
           background-color: purple1; /* background color */
       }
     .h1 {
@@ -26,9 +27,7 @@
 
 /*Applies to all <p> elements. */
    .p {
+        color: lavender blush2; /* text color */
         font-size: 14px:
         font-family: Tahoma, sans-serif;
-        color: lavender blush2; /* text color */
-   }
-/*Applies to all background */
-   .a  { colour: lavender blush1; }
+    }
