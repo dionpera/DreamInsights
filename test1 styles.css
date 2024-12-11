@@ -11,22 +11,22 @@
 
 /* test1 styles.css*/
 /*Applies to all background */
-     .background {
+.background {
           background-color: purple1; /* background color */
       }
-    .h1 {
+.h1 {
       color: lavender blush2; /* text color */
       font-family: Tahoma, sans-serif;
       position: center;
     }
-   .h2 {
+.h2 {
        colour: lavender blush2; /* text color */
       font-family: Tahoma, sans-serif;
       position: center;
    }  
 
 /*Applies to all <p> elements. */
-   .p {
+.p {
         color: lavender blush2; /* text color */
         font-size: 14px:
         font-family: Tahoma, sans-serif;
